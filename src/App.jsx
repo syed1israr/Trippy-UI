@@ -1,27 +1,33 @@
 import React from 'react';
-import MapComponent from './Map.jsx';
+
+
 import Header from './Components/Header.jsx';
+import Footer from './Components/Footer.jsx';
+import MapComponent from './Components/Map.jsx';
 
 const App = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-  <Header/>
-      <main className="w-full max-w-4xl p-4">
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h1 className="text-2xl font-bold mb-4">Plan My Trip</h1>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-200">
+     
+      <Header />
+
+      <main className="w-full max-w-6xl p-4 flex justify-between items-start">
+        {/* Input Section */}
+        <div className="bg-gray-300 p-6 rounded-lg shadow-lg w-1/3">
           <div className="mb-4">
             <input
               type="text"
               placeholder="Budget ..."
-              className="p-2 rounded-md border w-full"
+              className="p-4 rounded-full border w-full text-lg"
             />
           </div>
-          <button className="bg-black text-white p-2 rounded-md hover:bg-gray-800">
+          <button className="bg-black text-white p-4 w-full rounded-full hover:bg-gray-800">
             Plan my trip
           </button>
         </div>
 
-        <div className="mt-8">
+        {/* Map Section */}
+        <div className="w-2/3 ml-8">
           <MapComponent
             center={[0,0]}
             zoom={1}
@@ -31,6 +37,8 @@ const App = () => {
           />
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 };

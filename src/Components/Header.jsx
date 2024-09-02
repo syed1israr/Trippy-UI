@@ -1,18 +1,17 @@
-import React from 'react'
+// components/Header.jsx
+import React from 'react';
 
 const Header = () => {
   return (
-    <header className="w-full p-4 bg-black text-white flex justify-between items-center">
-    <div className="text-xl font-bold">Logo</div>
-    <nav>
-      <ul className="flex space-x-4">
-        <li><a href="#" className="hover:text-gray-400">Home</a></li>
-        <li><a href="#" className="hover:text-gray-400">About</a></li>
-        <li><a href="#" className="hover:text-gray-400">Manage Account</a></li>
-      </ul>
-    </nav>
-  </header>
-  )
-}
+    <header className="w-full bg-black text-white py-4 px-8 flex justify-between items-center">
+      <div className="text-2xl font-bold">Logo</div>
+      <nav className="space-x-8">
+        <a href="#" className="hover:underline">Home</a>
+        <a href="#" className="hover:underline">About</a>
+        <a href="#" className="hover:underline">Manage Account</a>
+      </nav>
+    </header>
+  );
+};
 
-export default Header
+export default Header;
